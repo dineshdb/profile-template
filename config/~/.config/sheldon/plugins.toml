@@ -1,0 +1,123 @@
+# `sheldon` configuration file
+# ----------------------------
+#
+# You can modify this file directly or you can use one of the following
+# `sheldon` commands which are provided to assist in editing the config file:
+#
+# - `sheldon add` to add a new plugin to the config file
+# - `sheldon edit` to open up the config file in the default editor
+# - `sheldon remove` to remove a plugin from the config file
+#
+# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+
+shell = "zsh"
+
+[plugins]
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[plugins.base16]
+github = "chriskempson/base16-shell"
+
+[plugins.blackbox]
+github = 'StackExchange/blackbox'
+
+[plugins.git-ignore]
+github = "laggardkernel/git-ignore"
+use = ['*.zsh']
+
+[plugins.git-fuzzy]
+git = "https://github.com/bigH/git-fuzzy.git"
+apply = ["path-bin"]
+
+[plugins.notes]
+git = 'https://github.com/chipsenkbeil/zsh-notes'
+
+[plugins.appup]
+git = 'https://github.com/Cloudstek/zsh-plugin-appup'
+
+[plugins.gtr]
+git = 'https://github.com/Zocker1999NET/zsh-gtr'
+
+[plugins.fzf]
+git = "https://github.com/junegunn/fzf"
+use = ["*.zsh"]
+
+[plugins.fzf-tab]
+git = 'https://github.com/Aloxaf/fzf-tab'
+use = ["fzf-tab.zsh"]
+
+[plugins.forgit]
+git = 'https://github.com/wfxr/forgit'
+
+[plugins.expand]
+github = 'MenkeTechnologies/zsh-expand'
+
+[plugins.emoji-cli]
+git = 'https://github.com/b4b4r07/emoji-cli'
+
+[plugins.clipboard]
+git = 'https://github.com/zpm-zsh/clipboard.git'
+
+[plugins.aliases-docker]
+git = 'https://github.com/webyneter/docker-aliases'
+
+[plugins.ohmyzsh-kubectl]
+remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/kubectl/kubectl.plugin.zsh"
+
+[plugins.ohmyzsh-systemd]
+remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/systemd/systemd.plugin.zsh"
+
+[plugins.ohmyzsh-rsync]
+remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/rsync/rsync.plugin.zsh"
+
+[plugins.ohmyzsh-mvn]
+remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/mvn/mvn.plugin.zsh"
+
+[plugins.ohmyzsh-history]
+remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/history/history.plugin.zsh"
+
+[plugins.ohmyzsh-extract]
+remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/extract/extract.plugin.zsh"
+
+[plugins.ohmyzsh-ansible]
+remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/ansible/ansible.plugin.zsh"
+
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+apply = ["fpath", "defer"]
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+
+[plugins.fzf-history-search]
+remote = "https://github.com/joshskidmore/zsh-fzf-history-search/raw/master/zsh-fzf-history-search.zsh"
+
+#[plugins.autocomplete]
+#git = 'https://github.com/marlonrichert/zsh-autocomplete'
+#use = ['zsh-autocomplete.plugin.zsh']
+#apply = ["defer"]
+
+[plugins.batextra]
+git = "https://github.com/eth-p/bat-extras"
+apply = ["path-src"]
+
+#[plugins.git-extras]
+#git = "https://github.com/unixorn/git-extra-commands"
+#use = ["*.zsh"]
+
+[plugins.watch]
+git = 'https://github.com/enrico9034/zsh-watch-plugin'
+
+[templates]
+defer = """{% for file in files %}
+zsh-defer source "{{ file }}"
+{% endfor %}"""
+path-bin = 'export PATH="$PATH:{{ dir }}/bin"'
+path-src = 'export PATH="$PATH:{{ dir }}/src"'

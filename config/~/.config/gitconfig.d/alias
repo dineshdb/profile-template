@@ -1,0 +1,15 @@
+[alias]
+alias = !git config --get-regexp '^alias\\.' | sd '^alias\\.(\\S+).*$' '$1'
+amend = "commit --amend --allow-empty"
+authors ="!git shortlog -s | cut -c8-"
+br = branch --verbose --all
+brx= branch --delete
+brX= branch --delete --force
+c= clone --depth=1 --shallow-submodules
+co = checkout
+fl = flow
+last = log -1 HEAD
+merge = merge --no-commit --no-ff
+pushu = push -u origin HEAD
+s=status
+sw=switch
