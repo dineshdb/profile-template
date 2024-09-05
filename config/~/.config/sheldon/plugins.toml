@@ -115,6 +115,10 @@ apply = ["path-src"]
 [plugins.watch]
 git = 'https://github.com/enrico9034/zsh-watch-plugin'
 
+[plugins.local]
+local = "~/.local/share/sheldon/plugins"
+use = ["*.sh"]
+
 [templates]
 defer = """{% for file in files %}
 zsh-defer source "{{ file }}"
