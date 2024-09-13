@@ -13,6 +13,7 @@ will overwrite previous applications.
 # config.yaml
 profile:
   - url: https://github.com/dineshdb/profile-template
+  - url: https://github.com/dineshdb/git-template
   - path: ./path-to-your-private-repo-modifications
 ```
 

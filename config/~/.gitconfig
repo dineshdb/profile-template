@@ -1,5 +1,0 @@
-# warning This file is managed by profbuilder. Do not edit it directly.
-# Add your dropin file in ~/.config/gitconfig.d/ directory and run profbuilder to update
-# ~/.config/gitconfig.d/_include.conf
-[include]
-path = "~/.config/gitconfig.d/_include.conf"

@@ -1,9 +1,3 @@
 profile:
-  - url: https://github.com/dineshdb/profile-template
+  - url: https://github.com/dineshdb/git-template
   - path: ./
-
-finally:
-- title: enable delta pager for git
-  if: which delta
-  then: mv ~/.config/gitconfig.d/_profb_delta.conf ~/.config/gitconfig.d/profb_delta.conf
-  
