@@ -10,15 +10,15 @@
 #
 # See the documentation for more https://github.com/rossmacarthur/sheldon#readme
 
-shell = "zsh"
-
 [plugins]
 
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
+profiles = ["zsh"]
 
 [plugins.base16]
 github = "chriskempson/base16-shell"
+profiles = ["zsh"]
 
 [plugins.blackbox]
 github = 'StackExchange/blackbox'
@@ -26,6 +26,7 @@ github = 'StackExchange/blackbox'
 [plugins.git-ignore]
 github = "laggardkernel/git-ignore"
 use = ['*.zsh']
+profiles = ["zsh"]
 
 [plugins.git-fuzzy]
 git = "https://github.com/bigH/git-fuzzy.git"
@@ -36,50 +37,54 @@ git = 'https://github.com/chipsenkbeil/zsh-notes'
 
 [plugins.appup]
 git = 'https://github.com/Cloudstek/zsh-plugin-appup'
+profiles = ["zsh"]
 
 [plugins.gtr]
 git = 'https://github.com/Zocker1999NET/zsh-gtr'
+profiles = ["zsh"]
 
 [plugins.fzf]
 git = "https://github.com/junegunn/fzf"
 use = ["*.zsh"]
+profiles = ["zsh"]
 
 [plugins.fzf-tab]
 git = 'https://github.com/Aloxaf/fzf-tab'
 use = ["fzf-tab.zsh"]
+profiles = ["zsh"]
 
 [plugins.forgit]
 git = 'https://github.com/wfxr/forgit'
+profiles = ["zsh"]
 
 [plugins.expand]
 github = 'MenkeTechnologies/zsh-expand'
+profiles = ["zsh"]
 
 [plugins.emoji-cli]
 git = 'https://github.com/b4b4r07/emoji-cli'
 
 [plugins.clipboard]
 git = 'https://github.com/zpm-zsh/clipboard.git'
+profiles = ["zsh"]
 
 [plugins.aliases-docker]
 git = 'https://github.com/webyneter/docker-aliases'
 
 [plugins.ohmyzsh-kubectl]
 remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/kubectl/kubectl.plugin.zsh"
+profiles = ["zsh"]
 
 [plugins.ohmyzsh-systemd]
 remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/systemd/systemd.plugin.zsh"
+profiles = ["zsh"]
 
 [plugins.ohmyzsh-rsync]
 remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/rsync/rsync.plugin.zsh"
 
-[plugins.ohmyzsh-mvn]
-remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/mvn/mvn.plugin.zsh"
-
-[plugins.ohmyzsh-history]
-remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/history/history.plugin.zsh"
-
 [plugins.ohmyzsh-extract]
 remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/extract/extract.plugin.zsh"
+profiles = ["zsh"]
 
 [plugins.ohmyzsh-ansible]
 remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/ansible/ansible.plugin.zsh"
@@ -88,32 +93,25 @@ remote = "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/ansib
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 apply = ["fpath", "defer"]
+profiles = ["zsh"]
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 use = ["{{ name }}.zsh"]
+profiles = ["zsh"]
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
+profiles = ["zsh"]
 
-[plugins.fzf-history-search]
-remote = "https://github.com/joshskidmore/zsh-fzf-history-search/raw/master/zsh-fzf-history-search.zsh"
-
-#[plugins.autocomplete]
-#git = 'https://github.com/marlonrichert/zsh-autocomplete'
-#use = ['zsh-autocomplete.plugin.zsh']
-#apply = ["defer"]
-
-[plugins.batextra]
-git = "https://github.com/eth-p/bat-extras"
-apply = ["path-src"]
-
-#[plugins.git-extras]
-#git = "https://github.com/unixorn/git-extra-commands"
-#use = ["*.zsh"]
+[plugins.git-extras]
+git = "https://github.com/unixorn/git-extra-commands"
+use = ["*.zsh"]
+profiles = ["zsh"]
 
 [plugins.watch]
 git = 'https://github.com/enrico9034/zsh-watch-plugin'
+profiles = ["zsh"]
 
 [plugins.local]
 local = "~/.local/share/sheldon/plugins"
